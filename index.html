@@ -1,0 +1,1240 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>大仟影视传媒_原创影视内容制作_品牌影像官方平台</title>
+<meta name="description" content="大仟影视传媒官方网站，专注原创影视内容制作与品牌影像叙事，提供纪录片、短片、广告片与影视人才培养，以专业高清的制作能力与企业级内容生态服务合作伙伴。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23151b2b'/%3E%3Cpath d='M18 20h14a10 10 0 0 1 0 20H18z' fill='%23ff5a3c'/%3E%3Cpath d='M26 28h7a3 3 0 0 1 0 6h-7z' fill='%23151b2b'/%3E%3Ccircle cx='46' cy='44' r='6' fill='%23f4c95d'/%3E%3C/svg%3E">
+<style>
+:root{
+  --dq-ink:#151b2b;
+  --dq-ink-soft:#2a3350;
+  --dq-paper:#f4f1ea;
+  --dq-paper-2:#eae5da;
+  --dq-red:#e8402a;
+  --dq-red-deep:#b92a18;
+  --dq-gold:#e8b23c;
+  --dq-teal:#1f6f6b;
+  --dq-line:#cfc7b6;
+  --dq-white:#fffdf9;
+  --dq-shadow:0 14px 34px rgba(21,27,43,.14);
+  --dq-radius:4px;
+  --dq-sticky-h:104px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--dq-sticky-h)}
+body{
+  margin:0;
+  font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  color:var(--dq-ink);
+  background:var(--dq-paper);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;line-height:1.28;font-weight:800;letter-spacing:.01em}
+p{margin:0 0 .9em}
+ul,ol{margin:0;padding-left:1.15em}
+button{font-family:inherit;cursor:pointer}
+.dq-wrap{width:min(1180px,92vw);margin:0 auto}
+.dq-skip{position:absolute;left:-9999px}
+.dq-skip:focus{left:12px;top:12px;z-index:99;background:var(--dq-red);color:#fff;padding:.5em 1em}
+
+/* ===== sticky bar ===== */
+.dq-topstack{position:sticky;top:0;z-index:60;box-shadow:0 6px 18px rgba(21,27,43,.10)}
+.dq-bulletin{background:var(--dq-ink);color:var(--dq-paper);font-size:.86rem;padding:.42rem 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.dq-bulletin .dq-wrap{display:flex;gap:.9rem;align-items:center;flex-wrap:wrap}
+.dq-bulletin-tag{background:var(--dq-red);color:#fff;font-weight:700;font-size:.72rem;letter-spacing:.14em;padding:.15em .55em;border-radius:2px}
+.dq-bulletin-list{display:flex;gap:1.2rem;flex-wrap:wrap;font-size:.82rem}
+.dq-bulletin-list span{opacity:.9}
+.dq-bulletin-list b{color:var(--dq-gold);font-weight:700}
+
+.dq-header{background:rgba(244,241,234,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--dq-line);padding:.55rem 0}
+.dq-header .dq-wrap{display:flex;align-items:center;gap:1.2rem}
+.dq-brand{display:flex;align-items:center;gap:.6rem;flex:0 0 auto}
+.dq-brand-mark{width:40px;height:40px;border-radius:6px;background:var(--dq-ink);display:grid;place-items:center;position:relative;overflow:hidden}
+.dq-brand-mark::before{content:"";position:absolute;left:8px;top:9px;width:16px;height:22px;background:var(--dq-red)}
+.dq-brand-mark::after{content:"";position:absolute;right:7px;bottom:7px;width:11px;height:11px;border-radius:50%;background:var(--dq-gold)}
+.dq-brand-name{font-weight:900;font-size:1.14rem;letter-spacing:.06em}
+.dq-brand-name small{display:block;font-size:.62rem;letter-spacing:.24em;font-weight:600;color:var(--dq-ink-soft);opacity:.75}
+.dq-nav{display:flex;gap:.2rem;margin-left:auto;flex-wrap:wrap}
+.dq-nav a{padding:.45em .72em;font-size:.9rem;font-weight:600;border-radius:3px;color:var(--dq-ink-soft);position:relative}
+.dq-nav a:hover{background:var(--dq-paper-2);color:var(--dq-red)}
+.dq-tools{display:flex;align-items:center;gap:.5rem}
+.dq-search{display:flex;align-items:center;border:1px solid var(--dq-line);background:var(--dq-white);border-radius:3px;overflow:hidden}
+.dq-search input{border:0;background:transparent;padding:.42em .6em;width:150px;font-size:.85rem;outline:none;color:var(--dq-ink)}
+.dq-search button{border:0;background:var(--dq-ink);color:#fff;padding:.42em .7em;font-size:.82rem}
+.dq-search button:hover{background:var(--dq-red)}
+.dq-burger{display:none;border:1px solid var(--dq-line);background:var(--dq-white);border-radius:3px;padding:.32em .6em;font-size:1.1rem;line-height:1}
+.dq-search-msg{font-size:.78rem;color:var(--dq-red-deep);padding:.2em .3em;display:none}
+.dq-search-msg.is-on{display:block}
+
+/* ===== hero ===== */
+.dq-hero{padding:2.6rem 0 2.2rem;position:relative;overflow:hidden}
+.dq-hero::before{content:"";position:absolute;inset:0;background:
+  repeating-linear-gradient(115deg,rgba(232,64,42,.05) 0 2px,transparent 2px 26px);
+  pointer-events:none}
+.dq-hero-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,4fr);gap:2.4rem;align-items:center;position:relative}
+.dq-hero-kicker{display:inline-flex;align-items:center;gap:.5rem;font-size:.76rem;letter-spacing:.2em;font-weight:700;color:var(--dq-red-deep);text-transform:uppercase}
+.dq-hero-kicker::before{content:"";width:26px;height:2px;background:var(--dq-red)}
+.dq-hero h1{font-size:clamp(2rem,4.6vw,3.3rem);margin:.55rem 0 .5rem;letter-spacing:.02em}
+.dq-hero h1 em{font-style:normal;color:var(--dq-red);position:relative}
+.dq-hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:6px;background:rgba(232,178,60,.5)}
+.dq-hero-lead{font-size:1.02rem;color:var(--dq-ink-soft);max-width:36em}
+.dq-hero-intro{font-size:.92rem;color:#4a5168;border-left:3px solid var(--dq-gold);padding-left:.9rem;margin:.9rem 0 1.2rem;background:rgba(255,253,249,.6)}
+.dq-hero-actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.4rem}
+.dq-btn{display:inline-flex;align-items:center;gap:.4em;border:1px solid var(--dq-ink);background:var(--dq-ink);color:var(--dq-white);padding:.62em 1.15em;border-radius:3px;font-size:.9rem;font-weight:700;transition:.18s}
+.dq-btn:hover{background:var(--dq-red);border-color:var(--dq-red);transform:translateY(-1px)}
+.dq-btn--ghost{background:transparent;color:var(--dq-ink)}
+.dq-btn--ghost:hover{background:var(--dq-ink);color:#fff;border-color:var(--dq-ink)}
+.dq-btn--sm{padding:.42em .8em;font-size:.8rem}
+.dq-hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;border-top:1px solid var(--dq-line);padding-top:1rem}
+.dq-stat b{display:block;font-size:1.42rem;font-family:Georgia,serif;color:var(--dq-red-deep);line-height:1.1}
+.dq-stat span{font-size:.78rem;color:#5a6178}
+.dq-hero-visual{position:relative}
+.dq-hero-frame{border-radius:6px;overflow:hidden;box-shadow:var(--dq-shadow);border:1px solid rgba(21,27,43,.08);background:#12182a}
+.dq-hero-frame svg{display:block;width:100%;height:auto;aspect-ratio:4/5}
+.dq-hero-badge{position:absolute;left:-14px;bottom:26px;background:var(--dq-gold);color:var(--dq-ink);font-weight:800;font-size:.8rem;padding:.5em .9em;border-radius:3px;box-shadow:var(--dq-shadow);letter-spacing:.06em}
+.dq-hero-tick{position:absolute;right:-10px;top:16px;background:var(--dq-white);border:1px solid var(--dq-line);font-size:.74rem;padding:.35em .7em;border-radius:3px;font-weight:700;color:var(--dq-teal)}
+
+/* ===== generic sections ===== */
+.dq-section{padding:2.8rem 0;border-top:1px solid var(--dq-line)}
+.dq-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.dq-section-head h2{font-size:clamp(1.35rem,2.4vw,1.85rem)}
+.dq-section-head h2 span{color:var(--dq-red)}
+.dq-eyebrow{font-size:.72rem;letter-spacing:.24em;font-weight:800;color:var(--dq-teal);text-transform:uppercase;display:block;margin-bottom:.3rem}
+.dq-note{font-size:.84rem;color:#5a6178;max-width:38em}
+
+/* focus module */
+.dq-focus{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:1.6rem;align-items:stretch}
+.dq-focus-main{background:var(--dq-white);border:1px solid var(--dq-line);border-radius:5px;overflow:hidden;box-shadow:var(--dq-shadow);display:flex;flex-direction:column}
+.dq-focus-main .dq-thumb{position:relative;overflow:hidden;background:#0f1524}
+.dq-focus-main .dq-thumb svg{display:block;width:100%;height:auto;aspect-ratio:16/9}
+.dq-play{position:absolute;left:14px;bottom:14px;display:flex;align-items:center;gap:.4em;background:rgba(21,27,43,.82);color:#fff;font-size:.78rem;padding:.35em .8em;border-radius:100px;border:1px solid rgba(255,255,255,.25)}
+.dq-play i{width:0;height:0;border-left:8px solid var(--dq-gold);border-top:5px solid transparent;border-bottom:5px solid transparent;display:inline-block}
+.dq-focus-body{padding:1rem 1.1rem 1.2rem}
+.dq-focus-body h3{font-size:1.16rem;margin-bottom:.4rem}
+.dq-focus-body p{font-size:.88rem;color:#4a5168;margin-bottom:.7rem}
+.dq-meta{display:flex;gap:.8rem;flex-wrap:wrap;font-size:.76rem;color:#6a7188;margin-bottom:.7rem}
+.dq-tagrow{display:flex;gap:.35rem;flex-wrap:wrap;margin-bottom:.8rem}
+.dq-tag{font-size:.72rem;font-weight:700;padding:.16em .55em;border-radius:2px;background:var(--dq-paper-2);color:#4a5168;border:1px solid var(--dq-line)}
+.dq-tag--red{background:rgba(232,64,42,.12);border-color:rgba(232,64,42,.35);color:var(--dq-red-deep)}
+.dq-tag--teal{background:rgba(31,111,107,.12);border-color:rgba(31,111,107,.35);color:var(--dq-teal)}
+.dq-focus-list{display:grid;gap:.7rem;min-width:0}
+.dq-focus-item{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.9rem;align-items:start;background:var(--dq-white);border:1px solid var(--dq-line);border-left:4px solid var(--dq-red);border-radius:4px;padding:.8rem .95rem;transition:.16s}
+.dq-focus-item:hover{transform:translateX(3px);box-shadow:0 8px 18px rgba(21,27,43,.09)}
+.dq-focus-no{font-family:Georgia,serif;font-size:1.5rem;font-weight:700;color:var(--dq-gold);line-height:1}
+.dq-focus-item h3{font-size:.98rem;margin-bottom:.2rem}
+.dq-focus-item p{font-size:.83rem;color:#5a6178;margin:0}
+.dq-focus-item .dq-meta{margin:.4rem 0 0}
+
+/* video list */
+.dq-vlist{display:grid;gap:.55rem}
+.dq-vrow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.8rem;align-items:center;border-bottom:1px dashed var(--dq-line);padding:.72rem .2rem;transition:.15s}
+.dq-vrow:hover{background:rgba(255,253,249,.85)}
+.dq-vrow-main{min-width:0}
+.dq-vrow h3{font-size:.95rem;margin-bottom:.15rem;display:flex;align-items:center;gap:.45rem;flex-wrap:wrap}
+.dq-vrow h3 .dq-num{font-family:Georgia,serif;font-size:.85rem;color:var(--dq-red);font-weight:700}
+.dq-vrow p{font-size:.82rem;color:#5a6178;margin:0 0 .3rem}
+.dq-vrow-sub{font-size:.74rem;color:#6a7188;display:flex;gap:.75rem;flex-wrap:wrap}
+.dq-vrow-ops{display:flex;gap:.35rem;flex-wrap:wrap;justify-content:flex-end}
+.dq-op{border:1px solid var(--dq-line);background:var(--dq-white);font-size:.74rem;padding:.3em .55em;border-radius:3px;color:#3d4460;display:inline-flex;align-items:center;gap:.3em;transition:.14s}
+.dq-op:hover{border-color:var(--dq-red);color:var(--dq-red-deep)}
+.dq-op.is-liked{background:rgba(232,64,42,.12);border-color:var(--dq-red);color:var(--dq-red-deep);font-weight:700}
+.dq-op.is-fav{background:rgba(232,178,60,.22);border-color:var(--dq-gold);color:#8a5f00;font-weight:700}
+
+/* two-col cards */
+.dq-cards2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem}
+.dq-card{background:var(--dq-white);border:1px solid var(--dq-line);border-radius:5px;overflow:hidden;display:flex;flex-direction:column;transition:.18s}
+.dq-card:hover{transform:translateY(-3px);box-shadow:var(--dq-shadow)}
+.dq-card svg{display:block;width:100%;height:auto;aspect-ratio:16/9}
+.dq-card-body{padding:.9rem 1rem 1.05rem}
+.dq-card-body h3{font-size:1rem;margin-bottom:.35rem}
+.dq-card-body p{font-size:.85rem;color:#4a5168;margin-bottom:.6rem}
+.dq-status{display:inline-block;font-size:.7rem;font-weight:700;padding:.12em .5em;border-radius:2px;background:rgba(31,111,107,.14);color:var(--dq-teal);border:1px solid rgba(31,111,107,.3)}
+
+/* topic list */
+.dq-topics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.dq-topic{background:var(--dq-white);border:1px solid var(--dq-line);border-top:4px solid var(--dq-teal);border-radius:4px;padding:1rem}
+.dq-topic h3{font-size:1rem;margin-bottom:.35rem}
+.dq-topic>p{font-size:.83rem;color:#5a6178}
+.dq-topic ol{font-size:.83rem;color:#3d4460;margin:.5rem 0 0;padding-left:1.1em;display:grid;gap:.28rem}
+.dq-topic li::marker{color:var(--dq-red);font-weight:700}
+
+/* authors */
+.dq-authors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.dq-author{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.9rem;background:var(--dq-white);border:1px solid var(--dq-line);border-radius:5px;padding:.9rem 1rem}
+.dq-avatar{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:1.25rem;color:#fff;flex:0 0 auto;box-shadow:inset 0 -6px 12px rgba(0,0,0,.16)}
+.dq-author h3{font-size:.98rem;margin-bottom:.1rem}
+.dq-author-role{font-size:.75rem;color:var(--dq-red-deep);font-weight:700;letter-spacing:.04em}
+.dq-author p{font-size:.82rem;color:#4a5168;margin:.35rem 0 .45rem}
+.dq-author-nums{display:flex;gap:.8rem;font-size:.74rem;color:#6a7188;flex-wrap:wrap}
+.dq-author-nums b{color:var(--dq-ink)}
+.dq-author-more{font-size:.76rem;border:0;background:transparent;color:var(--dq-teal);font-weight:800;padding:0;text-decoration:underline}
+.dq-author-more:hover{color:var(--dq-red)}
+
+/* comments */
+.dq-comments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}
+.dq-comment{background:var(--dq-white);border:1px solid var(--dq-line);border-radius:4px;padding:.8rem .95rem}
+.dq-comment-top{display:flex;align-items:center;gap:.55rem;margin-bottom:.35rem}
+.dq-comment-top b{font-size:.84rem}
+.dq-comment-top em{font-style:normal;font-size:.7rem;color:#8a90a5;margin-left:auto}
+.dq-stars{color:var(--dq-gold);font-size:.78rem;letter-spacing:.08em}
+.dq-comment p{font-size:.83rem;color:#3d4460;margin:0}
+.dq-cmt-reply{display:none;margin-top:.45rem;border-top:1px dashed var(--dq-line);padding-top:.4rem;font-size:.78rem;color:#6a7188}
+.dq-cmt-reply.is-open{display:block}
+.dq-linkbtn{border:0;background:transparent;padding:0;color:var(--dq-teal);font-size:.74rem;font-weight:800;text-decoration:underline}
+.dq-score-summary{display:flex;gap:1.4rem;align-items:center;background:var(--dq-ink);color:var(--dq-paper);border-radius:5px;padding:1rem 1.2rem;margin-bottom:1rem;flex-wrap:wrap}
+.dq-score-big{font-family:Georgia,serif;font-size:2.6rem;line-height:1;color:var(--dq-gold)}
+.dq-score-summary small{font-size:.78rem;opacity:.8}
+
+/* knowledge */
+.dq-knowledge{background:var(--dq-white);border:1px solid var(--dq-line);border-radius:6px;padding:1.6rem 1.7rem;box-shadow:var(--dq-shadow)}
+.dq-knowledge h2{font-size:clamp(1.3rem,2.2vw,1.7rem);margin-bottom:.3rem}
+.dq-knowledge h3{font-size:1.02rem;margin:1.15rem 0 .45rem;padding-left:.6rem;border-left:3px solid var(--dq-red)}
+.dq-knowledge p{font-size:.9rem;color:#3d4460;text-align:justify}
+.dq-knowledge .dq-kpi{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;margin:1rem 0}
+.dq-kpi div{background:var(--dq-paper);border:1px solid var(--dq-line);border-radius:4px;padding:.65rem .8rem}
+.dq-kpi b{display:block;color:var(--dq-teal);font-family:Georgia,serif;font-size:1.3rem}
+.dq-kpi span{font-size:.76rem;color:#5a6178}
+
+/* timeline / story */
+.dq-timeline{display:grid;gap:.1rem;position:relative;padding-left:1.4rem}
+.dq-timeline::before{content:"";position:absolute;left:.4rem;top:.4rem;bottom:.4rem;width:2px;background:linear-gradient(var(--dq-red),var(--dq-gold))}
+.dq-tl-item{position:relative;padding:.55rem 0 .85rem}
+.dq-tl-item::before{content:"";position:absolute;left:-1.1rem;top:.95rem;width:10px;height:10px;border-radius:50%;background:var(--dq-white);border:2px solid var(--dq-red)}
+.dq-tl-item b{font-family:Georgia,serif;color:var(--dq-red-deep);font-size:.95rem;margin-right:.5rem}
+.dq-tl-item span{font-size:.86rem;color:#3d4460}
+
+/* dynamics */
+.dq-dynamics{display:grid;gap:.6rem}
+.dq-dyn{display:grid;grid-template-columns:92px minmax(0,1fr);gap:.9rem;border-left:3px solid var(--dq-gold);padding:.5rem .8rem;background:rgba(255,253,249,.7)}
+.dq-dyn time{font-size:.78rem;color:var(--dq-teal);font-weight:800;font-family:Georgia,serif}
+.dq-dyn p{font-size:.85rem;margin:0;color:#3d4460}
+
+/* partners */
+.dq-partners{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8rem}
+.dq-partner{background:var(--dq-white);border:1px solid var(--dq-line);border-radius:4px;padding:1rem .8rem;text-align:center;font-weight:800;font-size:.88rem;color:var(--dq-ink-soft);letter-spacing:.04em}
+.dq-partner small{display:block;font-weight:600;font-size:.72rem;color:#6a7188;letter-spacing:0}
+.dq-partner:hover{border-color:var(--dq-red);color:var(--dq-red-deep)}
+
+/* faq */
+.dq-faq{display:grid;gap:.55rem}
+.dq-faq details{background:var(--dq-white);border:1px solid var(--dq-line);border-radius:4px;padding:.7rem .95rem}
+.dq-faq summary{cursor:pointer;font-weight:700;font-size:.92rem;list-style:none;display:flex;justify-content:space-between;gap:1rem;align-items:center}
+.dq-faq summary::-webkit-details-marker{display:none}
+.dq-faq summary::after{content:"+";font-family:Georgia,serif;font-size:1.2rem;color:var(--dq-red);transition:.15s}
+.dq-faq details[open] summary::after{transform:rotate(45deg)}
+.dq-faq p{font-size:.85rem;color:#4a5168;margin:.55rem 0 0}
+
+/* inspiration */
+.dq-insp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.9rem}
+.dq-insp div{background:var(--dq-ink);color:var(--dq-paper);border-radius:4px;padding:1rem}
+.dq-insp b{display:block;color:var(--dq-gold);font-size:.8rem;letter-spacing:.14em;margin-bottom:.35rem}
+.dq-insp p{font-size:.83rem;margin:0;opacity:.88}
+
+/* footer */
+.dq-footer{background:var(--dq-ink);color:#c9cddb;padding:2.6rem 0 1.4rem;margin-top:2rem}
+.dq-footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:1.6rem}
+.dq-footer h4{font-size:.86rem;letter-spacing:.16em;color:var(--dq-gold);margin-bottom:.6rem;text-transform:uppercase}
+.dq-footer p,.dq-footer li,.dq-footer a{font-size:.82rem;line-height:1.85}
+.dq-footer ul{list-style:none;padding:0;margin:0}
+.dq-footer a:hover{color:var(--dq-gold)}
+.dq-footer-brand{font-weight:900;font-size:1.05rem;color:#fff;letter-spacing:.08em}
+.dq-footer-bottom{border-top:1px solid rgba(255,255,255,.14);margin-top:1.6rem;padding-top:.9rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.76rem;opacity:.8}
+
+/* toast & modal */
+.dq-toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);background:var(--dq-ink);color:#fff;padding:.6em 1.2em;border-radius:4px;font-size:.86rem;opacity:0;pointer-events:none;transition:.22s;z-index:120;box-shadow:var(--dq-shadow);max-width:88vw}
+.dq-toast.is-on{opacity:1;transform:translate(-50%,0)}
+.dq-modal{position:fixed;inset:0;background:rgba(15,20,32,.6);display:none;place-items:center;z-index:130;padding:1rem}
+.dq-modal.is-on{display:grid}
+.dq-modal-box{background:var(--dq-white);border-radius:6px;max-width:520px;width:100%;max-height:86vh;overflow:auto;padding:1.4rem 1.5rem;position:relative;box-shadow:var(--dq-shadow)}
+.dq-modal-box h3{font-size:1.12rem;margin-bottom:.6rem}
+.dq-modal-box p{font-size:.88rem;color:#3d4460}
+.dq-modal-close{position:absolute;right:.7rem;top:.5rem;border:0;background:transparent;font-size:1.4rem;line-height:1;color:#6a7188}
+.dq-modal-close:hover{color:var(--dq-red)}
+.dq-form-row{display:grid;gap:.45rem;margin-bottom:.7rem}
+.dq-form-row label{font-size:.78rem;font-weight:700;color:#4a5168}
+.dq-form-row input,.dq-form-row textarea{font-family:inherit;font-size:.86rem;padding:.5em .65em;border:1px solid var(--dq-line);border-radius:3px;background:var(--dq-paper);color:var(--dq-ink);width:100%}
+.dq-share-row{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.6rem}
+.dq-share-row button{border:1px solid var(--dq-line);background:var(--dq-paper);border-radius:3px;padding:.4em .8em;font-size:.82rem;font-weight:700}
+.dq-share-row button:hover{border-color:var(--dq-red);color:var(--dq-red-deep)}
+
+.dq-top{position:fixed;right:18px;bottom:20px;z-index:100;width:44px;height:44px;border-radius:50%;border:0;background:var(--dq-red);color:#fff;font-size:1.1rem;box-shadow:var(--dq-shadow);display:none}
+.dq-top.is-on{display:block}
+.dq-top:hover{background:var(--dq-red-deep)}
+
+@media (max-width:1000px){
+  .dq-hero-grid{grid-template-columns:minmax(0,1fr)}
+  .dq-hero-visual{order:-1;max-width:520px}
+  .dq-focus{grid-template-columns:minmax(0,1fr)}
+  .dq-topics,.dq-insp{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .dq-partners{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .dq-footer-grid{grid-template-columns:1fr 1fr}
+  .dq-nav{display:none;width:100%;margin-left:0}
+  .dq-nav.is-open{display:flex}
+  .dq-burger{display:block;margin-left:auto}
+  .dq-header .dq-wrap{flex-wrap:wrap;row-gap:.5rem}
+  .dq-tools{width:100%;justify-content:space-between}
+  .dq-search{flex:1}
+  .dq-search input{width:100%}
+}
+@media (max-width:720px){
+  :root{--dq-sticky-h:150px}
+  .dq-cards2,.dq-authors,.dq-comments,.dq-topics,.dq-insp{grid-template-columns:minmax(0,1fr)}
+  .dq-partners{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .dq-knowledge{padding:1.1rem}
+  .dq-vrow{grid-template-columns:minmax(0,1fr)}
+  .dq-vrow-ops{justify-content:flex-start}
+  .dq-hero-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .dq-footer-grid{grid-template-columns:minmax(0,1fr)}
+  .dq-bulletin-list{font-size:.76rem}
+  .dq-score-summary{gap:.9rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+<a class="dq-skip" href="#dq-main">跳到主要内容</a>
+
+<!-- S1 公告条 + 页头 -->
+<div class="dq-topstack">
+  <div class="dq-bulletin" aria-label="最新官方公告">
+    <div class="dq-wrap">
+      <span class="dq-bulletin-tag">官方发布</span>
+      <div class="dq-bulletin-list">
+        <span><b>11-20</b> 冬季短片季「夜行人」开放报名</span>
+        <span><b>11-18</b> 纪录片《手作之城》第 3 集上线</span>
+        <span><b>11-15</b> 大仟影视学院 2027 春季班招募</span>
+        <span><b>11-12</b> 新增 4K 高清素材下载专区</span>
+      </div>
+    </div>
+  </div>
+  <header class="dq-header">
+    <div class="dq-wrap">
+      <a class="dq-brand" href="#dq-hero" aria-label="大仟影视传媒官方网站首页">
+        <span class="dq-brand-mark" aria-hidden="true"></span>
+        <span class="dq-brand-name">大仟影视传媒<small>DAQIAN FILM &amp; TV</small></span>
+      </a>
+      <button class="dq-burger" id="dqBurger" aria-expanded="false" aria-controls="dqNav">☰ 菜单</button>
+      <nav class="dq-nav" id="dqNav" aria-label="主导航">
+        <a href="#dq-focus">焦点内容</a>
+        <a href="#dq-series">专题企划</a>
+        <a href="#dq-authors">创作者</a>
+        <a href="#dq-knowledge">关键词解析</a>
+        <a href="#dq-comments">用户口碑</a>
+        <a href="#dq-dynamics">企业动态</a>
+        <a href="#dq-faq">帮助中心</a>
+      </nav>
+      <div class="dq-tools">
+        <div class="dq-search">
+          <input id="dqSearchInput" type="search" placeholder="搜索影片、专题、创作者" aria-label="站内搜索">
+          <button id="dqSearchBtn" type="button">搜索</button>
+        </div>
+      </div>
+    </div>
+    <div class="dq-wrap"><div class="dq-search-msg" id="dqSearchMsg" role="status" aria-live="polite"></div></div>
+  </header>
+</div>
+
+<main id="dq-main">
+
+  <!-- S2 品牌首屏 -->
+  <section class="dq-hero" id="dq-hero">
+    <div class="dq-wrap dq-hero-grid">
+      <div>
+        <span class="dq-hero-kicker">品牌官网 · 企业级影像力量</span>
+        <h1>大仟影视传媒 <em>原创影视内容</em> 制作平台</h1>
+        <p class="dq-hero-lead">以真实为底色，以专业为方法。大仟影视传媒是一家持续运营的影视内容企业，为品牌、机构与独立创作者提供从创意策划到高清成片的完整链路。</p>
+        <p class="dq-hero-intro">作为深耕影视内容领域的专业品牌，大仟影视传媒官方网站汇聚原创短片、纪录片、品牌影像与幕后访谈，以多元、包容的内容生态连接创作者与观众，用匠心打磨每一帧值得信赖的画面。</p>
+        <div class="dq-hero-actions">
+          <a class="dq-btn" href="#dq-focus">进入精品内容</a>
+          <a class="dq-btn dq-btn--ghost" href="#dq-series">查看专题企划</a>
+          <button class="dq-btn dq-btn--ghost" id="dqSubmitBtn" type="button">投稿入口</button>
+        </div>
+        <div class="dq-hero-stats">
+          <div class="dq-stat"><b>12 年</b><span>持续运营的影像品牌</span></div>
+          <div class="dq-stat"><b>486 部</b><span>已上线的原创正版作品</span></div>
+          <div class="dq-stat"><b>2,300 万</b><span>全平台累计播放</span></div>
+        </div>
+      </div>
+      <div class="dq-hero-visual">
+        <div class="dq-hero-frame">
+          <svg viewBox="0 0 480 600" role="img" aria-label="大仟影视传媒剪辑室内导演与摄影师围看监视器的暖色剧照">
+            <defs>
+              <linearGradient id="dqHeroSky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#242c46"/>
+                <stop offset="1" stop-color="#101527"/>
+              </linearGradient>
+              <linearGradient id="dqHeroLamp" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#f7d98c"/>
+                <stop offset="1" stop-color="#e8402a"/>
+              </linearGradient>
+            </defs>
+            <rect width="480" height="600" fill="url(#dqHeroSky)"/>
+            <circle cx="386" cy="92" r="58" fill="#e8b23c" opacity=".18"/>
+            <circle cx="386" cy="92" r="36" fill="#e8b23c" opacity=".28"/>
+            <path d="M0 452 L128 372 L228 428 L330 350 L480 430 L480 600 L0 600 Z" fill="#0b1020"/>
+            <rect x="58" y="286" width="238" height="146" rx="6" fill="#1b2238" stroke="#39415e" stroke-width="2"/>
+            <rect x="74" y="302" width="206" height="106" rx="3" fill="url(#dqHeroLamp)" opacity=".82"/>
+            <path d="M74 372 L128 340 L176 366 L228 330 L280 368 L280 408 L74 408 Z" fill="#7a2c1c" opacity=".55"/>
+            <circle cx="238" cy="330" r="12" fill="#fff3cf" opacity=".8"/>
+            <rect x="150" y="432" width="54" height="60" fill="#1b2238"/>
+            <rect x="118" y="492" width="118" height="12" rx="4" fill="#2c3552"/>
+            <g fill="#2f3854">
+              <circle cx="368" cy="332" r="30"/>
+              <rect x="344" y="366" width="48" height="96" rx="16"/>
+            </g>
+            <circle cx="368" cy="332" r="22" fill="#3a4463"/>
+            <rect x="356" y="372" width="24" height="70" rx="10" fill="#3a4463"/>
+            <path d="M338 424 L306 470 L330 480 L362 438 Z" fill="#2f3854"/>
+            <rect x="292" y="470" width="46" height="26" rx="5" fill="#e8402a" transform="rotate(-16 315 483)"/>
+            <circle cx="112" cy="520" r="26" fill="#2a3350"/>
+            <path d="M88 596 L88 546 Q88 528 112 528 Q136 528 136 546 L136 596 Z" fill="#1e2740"/>
+            <g stroke="#e8b23c" stroke-width="2" opacity=".7">
+              <line x1="40" y1="236" x2="120" y2="236"/>
+              <line x1="40" y1="252" x2="96" y2="252"/>
+            </g>
+          </svg>
+        </div>
+        <span class="dq-hero-badge">正在拍摄 · 冬季短片季</span>
+        <span class="dq-hero-tick">4K 高清成片</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 焦点内容 -->
+  <section class="dq-section" id="dq-focus">
+    <div class="dq-wrap">
+      <div class="dq-section-head">
+        <div>
+          <span class="dq-eyebrow">Focus · 焦点内容</span>
+          <h2>本周焦点：<span>大仟影视传媒</span> 重点推荐</h2>
+        </div>
+        <p class="dq-note">编辑部从原创片库与官方发布中挑选的 4 部重点作品，覆盖深度纪录、品牌影像与创作者访谈，全部为高清正版内容。</p>
+      </div>
+
+      <div class="dq-focus">
+        <article class="dq-focus-main">
+          <div class="dq-thumb">
+            <svg viewBox="0 0 640 360" role="img" aria-label="纪录片《手作之城》木工坊工人在窗边打磨木料的镜头">
+              <defs>
+                <linearGradient id="dqFocusWarm" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#3a2a1a"/>
+                  <stop offset="1" stop-color="#0f1524"/>
+                </linearGradient>
+              </defs>
+              <rect width="640" height="360" fill="url(#dqFocusWarm)"/>
+              <rect x="40" y="34" width="184" height="128" fill="#e8b23c" opacity=".28"/>
+              <rect x="40" y="34" width="184" height="128" fill="none" stroke="#e8b23c" stroke-width="3" opacity=".6"/>
+              <path d="M40 162 L224 162 L224 34 Z" fill="#f4e6c4" opacity=".18"/>
+              <rect x="0" y="238" width="640" height="122" fill="#161b2b"/>
+              <rect x="86" y="212" width="220" height="20" rx="4" fill="#8a5a2c"/>
+              <rect x="112" y="232" width="14" height="70" fill="#6d461f"/>
+              <rect x="268" y="232" width="14" height="70" fill="#6d461f"/>
+              <circle cx="386" cy="176" r="32" fill="#c98a52"/>
+              <path d="M354 236 Q354 202 386 202 Q418 202 418 236 L418 300 L354 300 Z" fill="#2a3350"/>
+              <path d="M356 244 L296 210 L286 226 L348 262 Z" fill="#c98a52"/>
+              <rect x="272" y="196" width="34" height="12" rx="3" fill="#e8402a" transform="rotate(-24 289 202)"/>
+              <g stroke="#e8b23c" stroke-width="2" opacity=".45" fill="none">
+                <path d="M470 96 Q520 130 500 190"/>
+                <path d="M470 96 L540 70"/>
+                <circle cx="500" cy="190" r="5" fill="#e8b23c"/>
+              </g>
+              <rect x="470" y="220" width="120" height="8" rx="4" fill="#4a3a22"/>
+              <rect x="486" y="228" width="88" height="60" fill="#241b10"/>
+            </svg>
+            <span class="dq-play"><i aria-hidden="true"></i>播放 18:42</span>
+          </div>
+          <div class="dq-focus-body">
+            <h3>《手作之城》第三集：一把木椅的 72 道工序</h3>
+            <p>跟拍木作匠人陈砚舟四十天，从选料到上漆，记录一把椅子如何被耐心塑造。大仟影视传媒摄制组用两颗定焦镜头与自然光，保留了工坊里的粉尘、木纹与呼吸声。</p>
+            <div class="dq-meta"><span>纪录片 · 18:42</span><span>播放 126,480</span><span>点赞 9,203</span><span>收藏 3,116</span></div>
+            <div class="dq-tagrow">
+              <span class="dq-tag dq-tag--red">品牌故事</span>
+              <span class="dq-tag">手作DIY</span>
+              <span class="dq-tag">匠人访谈</span>
+            </div>
+            <div class="dq-vrow-ops">
+              <button class="dq-op dq-like" type="button" data-count="9203"><span>♥</span> <span class="dq-like-num">9,203</span></button>
+              <button class="dq-op dq-fav" type="button"><span>☆</span> 收藏</button>
+              <button class="dq-op dq-share" type="button" data-title="《手作之城》第三集：一把木椅的 72 道工序">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <div class="dq-focus-list">
+          <article class="dq-focus-item">
+            <span class="dq-focus-no">02</span>
+            <div>
+              <h3>《城市呼吸》· 清晨四点的水产市场</h3>
+              <p>凌晨的成都青石桥，摊主们用川话招呼第一批客人，镜头贴着冰面与鱼鳞移动，一整条街的市井热气被收进 12 分钟。</p>
+              <div class="dq-meta"><span>城市探索 · 12:07</span><span>播放 88,120</span><span>作者：林知远</span></div>
+            </div>
+          </article>
+          <article class="dq-focus-item">
+            <span class="dq-focus-no">03</span>
+            <div>
+              <h3>品牌影像《一盏灯的三次改稿》</h3>
+              <p>为一间独立灯具工作室拍摄的形象片，完整呈现提案、打样、返工的三个版本，把广告拍摄流程做成了一次行业观察。</p>
+              <div class="dq-meta"><span>创作幕后 · 09:36</span><span>播放 64,905</span><span>作者：周谨言</span></div>
+            </div>
+          </article>
+          <article class="dq-focus-item">
+            <span class="dq-focus-no">04</span>
+            <div>
+              <h3>创作者访谈：剪辑师的一天从删素材开始</h3>
+              <p>访谈大仟影视传媒后期总监苏禾，聊 4 小时素材剪到 90 秒的判断标准，以及为什么“舍得不拍”是一种专业。</p>
+              <div class="dq-meta"><span>人物访谈 · 22:18</span><span>播放 51,772</span><span>作者：编辑部</span></div>
+            </div>
+          </article>
+          <article class="dq-focus-item">
+            <span class="dq-focus-no">05</span>
+            <div>
+              <h3>治愈影像《山里下雨的那一天》</h3>
+              <p>莫干山民宿雨天记录，无旁白、无配乐，只有屋檐水声与柴火声。上线两周收到 1,900 条关于“安静”的评论。</p>
+              <div class="dq-meta"><span>治愈影像 · 06:44</span><span>播放 43,360</span><span>作者：程未白</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 视频流（文字列表布局） -->
+  <section class="dq-section" id="dq-videos">
+    <div class="dq-wrap">
+      <div class="dq-section-head">
+        <div>
+          <span class="dq-eyebrow">Videos · 热门视频流</span>
+          <h2>大仟影视传媒 精品内容 · 正在播放</h2>
+        </div>
+        <p class="dq-note">6 条近期热度最高的原创视频，含标题、摘要、标签、创作者与互动数据。点击操作按钮可直接参与互动。</p>
+      </div>
+
+      <div class="dq-vlist">
+        <article class="dq-vrow">
+          <div class="dq-vrow-main">
+            <h3><span class="dq-num">01</span> 短片《第七次开机》</h3>
+            <p>一个剧组连续七次重拍同一场戏，最后选中的却是第一次的意外走位。关于创作执念与放手的 8 分钟剧情短片。</p>
+            <div class="dq-tagrow"><span class="dq-tag dq-tag--red">原创剧情</span><span class="dq-tag">创作幕后</span><span class="dq-tag">行业观察</span></div>
+            <div class="dq-vrow-sub"><span>作者：沈砚</span><span>08:12</span><span>播放 138,204</span><span>点赞 11,462</span><span>收藏 4,018</span></div>
+          </div>
+          <div class="dq-vrow-ops">
+            <button class="dq-op dq-like" type="button" data-count="11462"><span>♥</span> <span class="dq-like-num">11,462</span></button>
+            <button class="dq-op dq-fav" type="button"><span>☆</span> 收藏</button>
+            <button class="dq-op dq-share" type="button" data-title="短片《第七次开机》">分享</button>
+          </div>
+        </article>
+
+        <article class="dq-vrow">
+          <div class="dq-vrow-main">
+            <h3><span class="dq-num">02</span> 教程《一支手机也能拍出电影感空镜》</h3>
+            <p>从取景角度、运动速度到后期调色，拆解 5 个可复用的空镜拍法，附赠可直接下载的高清素材包。</p>
+            <div class="dq-tagrow"><span class="dq-tag dq-tag--teal">教程干货</span><span class="dq-tag">实用技巧</span><span class="dq-tag">创意</span></div>
+            <div class="dq-vrow-sub"><span>作者：程未白</span><span>14:26</span><span>播放 96,780</span><span>点赞 8,340</span><span>收藏 6,207</span></div>
+          </div>
+          <div class="dq-vrow-ops">
+            <button class="dq-op dq-like" type="button" data-count="8340"><span>♥</span> <span class="dq-like-num">8,340</span></button>
+            <button class="dq-op dq-fav" type="button"><span>☆</span> 收藏</button>
+            <button class="dq-op dq-share" type="button" data-title="教程《一支手机也能拍出电影感空镜》">分享</button>
+          </div>
+        </article>
+
+        <article class="dq-vrow">
+          <div class="dq-vrow-main">
+            <h3><span class="dq-num">03</span> 深度测评《四款电影机在低光下的真实差别》</h3>
+            <p>同一场景、同一条镜头、同一份调色，横向对比四台机器的噪点、宽容度与肤色还原，给预算有限的团队一份参考。</p>
+            <div class="dq-tagrow"><span class="dq-tag">深度测评</span><span class="dq-tag">科技前沿</span><span class="dq-tag dq-tag--red">专业</span></div>
+            <div class="dq-vrow-sub"><span>作者：周谨言</span><span>19:04</span><span>播放 74,512</span><span>点赞 5,921</span><span>收藏 3,988</span></div>
+          </div>
+          <div class="dq-vrow-ops">
+            <button class="dq-op dq-like" type="button" data-count="5921"><span>♥</span> <span class="dq-like-num">5,921</span></button>
+            <button class="dq-op dq-fav" type="button"><span>☆</span> 收藏</button>
+            <button class="dq-op dq-share" type="button" data-title="深度测评《四款电影机在低光下的真实差别》">分享</button>
+          </div>
+        </article>
+
+        <article class="dq-vrow">
+          <div class="dq-vrow-main">
+            <h3><span class="dq-num">04</span> 人物访谈《在片场做场记的第五年》</h3>
+            <p>场记阿榆讲述如何记住一场戏的所有细节：道具位置、演员走位、光线变化。她说这行最重要的是“不慌张”。</p>
+            <div class="dq-tagrow"><span class="dq-tag">人物访谈</span><span class="dq-tag">职场日常</span><span class="dq-tag">真实</span></div>
+            <div class="dq-vrow-sub"><span>作者：林知远</span><span>16:35</span><span>播放 58,901</span><span>点赞 4,712</span><span>收藏 2,204</span></div>
+          </div>
+          <div class="dq-vrow-ops">
+            <button class="dq-op dq-like" type="button" data-count="4712"><span>♥</span> <span class="dq-like-num">4,712</span></button>
+            <button class="dq-op dq-fav" type="button"><span>☆</span> 收藏</button>
+            <button class="dq-op dq-share" type="button" data-title="人物访谈《在片场做场记的第五年》">分享</button>
+          </div>
+        </article>
+
+        <article class="dq-vrow">
+          <div class="dq-vrow-main">
+            <h3><span class="dq-num">05</span> 城市探索《从旧厂房到放映厅》</h3>
+            <p>走访三座由工业遗址改造的小型影院，聊空间再利用如何让一座城市重新拥有看电影的日常。</p>
+            <div class="dq-tagrow"><span class="dq-tag">城市探索</span><span class="dq-tag">在地文化</span><span class="dq-tag">艺术美学</span></div>
+            <div class="dq-vrow-sub"><span>作者：苏禾</span><span>11:48</span><span>播放 49,330</span><span>点赞 3,850</span><span>收藏 1,967</span></div>
+          </div>
+          <div class="dq-vrow-ops">
+            <button class="dq-op dq-like" type="button" data-count="3850"><span>♥</span> <span class="dq-like-num">3,850</span></button>
+            <button class="dq-op dq-fav" type="button"><span>☆</span> 收藏</button>
+            <button class="dq-op dq-share" type="button" data-title="城市探索《从旧厂房到放映厅》">分享</button>
+          </div>
+        </article>
+
+        <article class="dq-vrow">
+          <div class="dq-vrow-main">
+            <h3><span class="dq-num">06</span> 知识科普《电影里的雨是怎么造出来的》</h3>
+            <p>从消防水管到人工降雨车，讲清三种常见方式的成本、效果与安全边界，并附上剧组实际使用记录。</p>
+            <div class="dq-tagrow"><span class="dq-tag">知识科普</span><span class="dq-tag">实用技巧</span><span class="dq-tag dq-tag--teal">官方发布</span></div>
+            <div class="dq-vrow-sub"><span>作者：编辑部</span><span>10:19</span><span>播放 41,208</span><span>点赞 3,144</span><span>收藏 2,530</span></div>
+          </div>
+          <div class="dq-vrow-ops">
+            <button class="dq-op dq-like" type="button" data-count="3144"><span>♥</span> <span class="dq-like-num">3,144</span></button>
+            <button class="dq-op dq-fav" type="button"><span>☆</span> 收藏</button>
+            <button class="dq-op dq-share" type="button" data-title="知识科普《电影里的雨是怎么造出来的》">分享</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S4 专题企划 -->
+  <section class="dq-section" id="dq-series">
+    <div class="dq-wrap">
+      <div class="dq-section-head">
+        <div>
+          <span class="dq-eyebrow">Series · 专题企划</span>
+          <h2><span>大仟影视传媒</span> 三个长期专题</h2>
+        </div>
+        <p class="dq-note">专题由编辑部与创作者共同策划，按季度更新，每个专题包含独立的内容条目与创作标准，接受社区投稿。</p>
+      </div>
+
+      <div class="dq-cards2" style="margin-bottom:1.2rem">
+        <article class="dq-card">
+          <svg viewBox="0 0 640 360" role="img" aria-label="专题「夜行人」夜间街道上灯光与行人剪影的海报画面">
+            <defs>
+              <linearGradient id="dqNight" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#0d1430"/>
+                <stop offset="1" stop-color="#1c2b4a"/>
+              </linearGradient>
+            </defs>
+            <rect width="640" height="360" fill="url(#dqNight)"/>
+            <g fill="#e8b23c" opacity=".22">
+              <circle cx="112" cy="88" r="40"/><circle cx="512" cy="120" r="26"/><circle cx="300" cy="60" r="18"/>
+            </g>
+            <path d="M0 264 L640 240 L640 360 L0 360 Z" fill="#0a1020"/>
+            <g stroke="#3d4a6b" stroke-width="10">
+              <line x1="86" y1="264" x2="86" y2="120"/><line x1="560" y1="240" x2="560" y2="96"/>
+            </g>
+            <circle cx="86" cy="112" r="12" fill="#fff3cf"/>
+            <circle cx="560" cy="88" r="10" fill="#fff3cf" opacity=".8"/>
+            <g fill="#0a1020">
+              <circle cx="248" cy="214" r="14"/>
+              <path d="M232 230 Q248 220 264 230 L268 288 L228 288 Z"/>
+              <circle cx="352" cy="200" r="12"/>
+              <path d="M338 214 Q352 204 366 214 L370 272 L334 272 Z"/>
+            </g>
+            <path d="M200 260 Q320 220 440 252" stroke="#e8402a" stroke-width="3" fill="none" stroke-dasharray="10 8"/>
+            <rect x="410" y="286" width="150" height="6" rx="3" fill="#e8402a" opacity=".8"/>
+          </svg>
+          <div class="dq-card-body">
+            <span class="dq-status">更新中 · 已上线 5 期</span>
+            <h3>专题一 ·「夜行人」冬季短片季</h3>
+            <p>记录城市夜晚的工作者：便利店店员、夜班司机、急诊陪护。每人一集，每集 8 分钟，统一采用手持与自然光。</p>
+            <ol>
+              <li>第 1 期《凌晨的收银台》· 便利店夜班群像</li>
+              <li>第 2 期《末班车之后》· 公交司机的收车流程</li>
+              <li>第 3 期《急诊先到的人》· 陪护家属的六个小时</li>
+            </ol>
+          </div>
+        </article>
+
+        <article class="dq-card">
+          <svg viewBox="0 0 640 360" role="img" aria-label="专题「手作之城」中陶轮、陶土与双手交叠的工艺画面">
+            <defs>
+              <linearGradient id="dqClay" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#c96f4a"/>
+                <stop offset="1" stop-color="#5c2c1e"/>
+              </linearGradient>
+            </defs>
+            <rect width="640" height="360" fill="url(#dqClay)"/>
+            <rect x="0" y="252" width="640" height="108" fill="#2a1710"/>
+            <ellipse cx="320" cy="286" rx="130" ry="18" fill="#3f2318"/>
+            <ellipse cx="320" cy="276" rx="96" ry="12" fill="#8a4a30"/>
+            <path d="M244 268 Q262 150 320 152 Q378 154 396 268 Z" fill="#e2a37a"/>
+            <path d="M250 260 Q268 176 320 178 Q372 180 390 260" fill="none" stroke="#b06a45" stroke-width="6"/>
+            <g fill="#f2c8a8">
+              <path d="M204 236 Q232 200 264 214 L272 242 L214 258 Z"/>
+              <path d="M436 236 Q408 200 376 214 L368 242 L426 258 Z"/>
+            </g>
+            <circle cx="120" cy="84" r="30" fill="#f4e6c4" opacity=".16"/>
+            <g stroke="#f4e6c4" stroke-width="3" opacity=".45">
+              <circle cx="320" cy="152" r="18" fill="none"/>
+            </g>
+          </svg>
+          <div class="dq-card-body">
+            <span class="dq-status">更新中 · 已上线 3 期</span>
+            <h3>专题二 ·「手作之城」匠人纪录计划</h3>
+            <p>与大仟影视传媒长期合作的手工艺人系列，用纪录片的耐心呈现物件的诞生过程，所有素材均为现场同期声收音。</p>
+            <ol>
+              <li>《一把木椅的 72 道工序》· 木作</li>
+              <li>《一千三百度》· 陶艺窑变记录</li>
+              <li>《补书人》· 古籍修复师的日常</li>
+            </ol>
+          </div>
+        </article>
+      </div>
+
+      <article class="dq-topic" style="border-top-color:var(--dq-red)">
+        <h3>专题三 ·「第一次拍片」新人扶持计划</h3>
+        <p>面向入行三年以内的创作者，提供设备、场地、后期指导与官方发行资源。2027 春季班将在 12 月开放报名，通过初审的作品可获 4K 高清成片技术支持与推荐展示位。</p>
+        <ol>
+          <li>《我用一台旧相机拍了部片》· 器材不是门槛</li>
+          <li>《十二个人的第一次场记表》· 学生剧组复盘</li>
+          <li>《从剧本到放映的 97 天》· 完整创作日志</li>
+        </ol>
+      </article>
+    </div>
+  </section>
+
+  <!-- S5 创作者矩阵 -->
+  <section class="dq-section" id="dq-authors">
+    <div class="dq-wrap">
+      <div class="dq-section-head">
+        <div>
+          <span class="dq-eyebrow">Creators · 创作者矩阵</span>
+          <h2>与大仟影视传媒并肩的 6 位创作者</h2>
+        </div>
+        <p class="dq-note">他们把镜头对准真实的人与事。点开作者信息可查看档案，所有创作者均与企业签署正版内容授权。</p>
+      </div>
+
+      <div class="dq-authors">
+        <article class="dq-author">
+          <div class="dq-avatar" style="background:linear-gradient(140deg,#e8402a,#7a1c10)" aria-hidden="true">沈</div>
+          <div>
+            <h3>沈砚</h3>
+            <div class="dq-author-role">剧情短片导演</div>
+            <p>习惯在片场留出意外发生的空间。拍过 27 部短片，最满意的一部只有 3 分钟，讲一个父亲在楼下抽完烟才回家。相信克制比煽情更有力量。</p>
+            <div class="dq-author-nums"><span>作品 <b>27</b></span><span>粉丝 <b>18.6 万</b></span><span>擅长：剧情 / 编剧</span></div>
+            <button class="dq-author-more" type="button" data-author="沈砚" data-desc="剧情短片导演，代表作《第七次开机》《楼下三分钟》。在大仟影视传媒负责年度剧情短片季的整体创作方向。">查看作者档案</button>
+          </div>
+        </article>
+
+        <article class="dq-author">
+          <div class="dq-avatar" style="background:linear-gradient(140deg,#1f6f6b,#0e3b38)" aria-hidden="true">程</div>
+          <div>
+            <h3>程未白</h3>
+            <div class="dq-author-role">摄影指导 / 教程作者</div>
+            <p>擅长把复杂的技术拆成能马上用上的步骤。拍了九年自然光，坚持“先理解光，再谈设备”。他的空镜教程被多家机构用作培训材料。</p>
+            <div class="dq-author-nums"><span>作品 <b>64</b></span><span>粉丝 <b>24.1 万</b></span><span>擅长：摄影 / 调色</span></div>
+            <button class="dq-author-more" type="button" data-author="程未白" data-desc="摄影指导，长期负责大仟影视传媒自然光影像系列教程，主讲取景与调色，累计课程观看超过 600 万次。">查看作者档案</button>
+          </div>
+        </article>
+
+        <article class="dq-author">
+          <div class="dq-avatar" style="background:linear-gradient(140deg,#e8b23c,#8a5f00)" aria-hidden="true">林</div>
+          <div>
+            <h3>林知远</h3>
+            <div class="dq-author-role">纪录片导演</div>
+            <p>擅长在城市里等一个瞬间。为拍水产市场的清晨，他在同一条街上待了十七天。作品多次进入城市影像展，关注普通人的日常节奏。</p>
+            <div class="dq-author-nums"><span>作品 <b>19</b></span><span>粉丝 <b>15.3 万</b></span><span>擅长：纪录 / 城市</span></div>
+            <button class="dq-author-more" type="button" data-author="林知远" data-desc="纪录片导演，代表系列《城市呼吸》，以长周期跟拍记录城市与人的关系，现任大仟影视传媒纪录板块策划。">查看作者档案</button>
+          </div>
+        </article>
+
+        <article class="dq-author">
+          <div class="dq-avatar" style="background:linear-gradient(140deg,#2a3350,#151b2b)" aria-hidden="true">苏</div>
+          <div>
+            <h3>苏禾</h3>
+            <div class="dq-author-role">后期总监 / 剪辑师</div>
+            <p>做过 300 多支片子的最后一道关。她的判断标准很简单：观众有没有在前 30 秒被留住。近年专注空间与人物的城市影像剪辑。</p>
+            <div class="dq-author-nums"><span>作品 <b>312</b></span><span>粉丝 <b>11.8 万</b></span><span>擅长：剪辑 / 结构</span></div>
+            <button class="dq-author-more" type="button" data-author="苏禾" data-desc="大仟影视传媒后期总监，负责企业重点项目成片把关，同时以创作者身份记录城市空间改造与小型放映文化。">查看作者档案</button>
+          </div>
+        </article>
+
+        <article class="dq-author">
+          <div class="dq-avatar" style="background:linear-gradient(140deg,#8a3f6b,#3f1730)" aria-hidden="true">周</div>
+          <div>
+            <h3>周谨言</h3>
+            <div class="dq-author-role">技术测评作者</div>
+            <p>器材爱好者，但更在意怎么用。测评从不打分，只给使用场景建议。写过 80 多篇设备对比，习惯把测试条件全部公开。</p>
+            <div class="dq-author-nums"><span>作品 <b>86</b></span><span>粉丝 <b>20.5 万</b></span><span>擅长：测评 / 技术</span></div>
+            <button class="dq-author-more" type="button" data-author="周谨言" data-desc="技术测评作者，负责大仟影视传媒设备测试栏目，所有测评均公开拍摄参数与原始素材片段。">查看作者档案</button>
+          </div>
+        </article>
+
+        <article class="dq-author">
+          <div class="dq-avatar" style="background:linear-gradient(140deg,#4a6b1f,#22330e)" aria-hidden="true">编</div>
+          <div>
+            <h3>大仟编辑部</h3>
+            <div class="dq-author-role">官方账号 · 内容运营</div>
+            <p>由 6 人组成的官方内容团队，负责企业动态、行业观察与活动发布的统一口径。所有官方内容都会在这里首发，并同步至社区公告。</p>
+            <div class="dq-author-nums"><span>作品 <b>428</b></span><span>粉丝 <b>36.9 万</b></span><span>擅长：行业 / 活动</span></div>
+            <button class="dq-author-more" type="button" data-author="大仟编辑部" data-desc="大仟影视传媒官方账号，发布企业动态、内容更新与活动报名信息，是品牌对外沟通的主要窗口。">查看作者档案</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 关键词解析（企业简介 + 深度解析） -->
+  <section class="dq-section" id="dq-knowledge">
+    <div class="dq-wrap">
+      <div class="dq-knowledge">
+        <span class="dq-eyebrow">Deep Dive · 关键词解析</span>
+        <h2>读懂“大仟影视传媒”：一家影视内容企业的完整切片</h2>
+        <p style="color:#5a6178;font-size:.9rem">以下内容由编辑部整理，围绕品牌定位、内容方法、社区生态与品质标准四个维度展开，帮助合作方与新观众快速理解这家持续运营的影视内容企业。</p>
+
+        <div class="dq-kpi">
+          <div><b>12 年</b><span>企业持续运营年限</span></div>
+          <div><b>486 部</b><span>原创正版作品入库</span></div>
+          <div><b>96.4%</b><span>合作方年度续约率</span></div>
+        </div>
+
+        <h3>一、品牌定位：从制作公司到内容生态</h3>
+        <p>大仟影视传媒并不是一家只接单的拍摄公司。成立之初，团队只有五个人和两台机器，第一份工作是为一间社区书店拍开业纪录。十二年过去，企业已经形成三条相对稳定的业务线：品牌影像制作、原创纪录与剧情片、以及面向新人的影视教育与扶持。这三条线共同构成了它所说的“内容生态”——不是把内容简单堆在一起，而是让制作能力、原创表达与人才成长互相供给。品牌官网上的每一个栏目，其实都对应着这条链路上的一个环节：焦点内容展示近期作品，专题企划沉淀长期主题，创作者矩阵呈现人的部分，企业动态则记录组织的成长轨迹。对合作方而言，理解这一定位很重要，因为大仟影视传媒提供的往往不只是一支片子，而是从策划、拍摄、后期到发行的完整方案，并且在每个环节都保留了可追溯的文档与素材归档。</p>
+
+        <h3>二、内容方法：把真实当作第一原则</h3>
+        <p>在具体的创作方法上，这家影视传媒企业有一套被反复验证的流程。前期策划阶段，团队会先做“事实清单”：把拍摄对象一天的时间线、空间动线、关键人物关系全部列出来，再决定镜头语言。这一步常常被省略，但恰恰决定了纪录片能不能成立。拍摄阶段，企业更偏好自然光与同期声，减少不必要的干预，让被拍摄者保持原本的节奏。后期阶段，剪辑师会先做一版“无配乐版”，确认叙事本身站得住，再考虑音乐与调色。以《手作之城》为例，一把木椅的 72 道工序被压缩到 18 分钟，靠的不是快剪，而是对关键动作的选择：选料时的手感、打磨时的停顿、上漆前的一次擦拭。这种方法的代价是周期长、成本高，但换来的是内容的可信度。对于品牌客户，团队会把同样的方法用在广告片里，让商业表达依然保有人物的真实反应，而不是让演员念完台词就结束。</p>
+
+        <h3>三、社区生态：创作者、观众与合作方如何互相成就</h3>
+        <p>大仟影视传媒的社区并不是一个流量池，而更像一个长期协作网络。创作者在平台上发布作品、参与专题、接受访谈，同时通过“第一次拍片”计划获得设备与场地支持；观众在评论区留下具体的使用反馈，比如某个镜头太短、某段旁白多余，这些意见会进入编辑部的月度复盘；合作方则通过企业动态与专题企划了解团队的能力边界，从而在项目开始前就对交付标准有清晰预期。为了让这种协作持续运转，企业设置了三条相对明确的规则：原创内容必须完成版权登记，转载与二次剪辑需获得书面授权，所有公开数据真实可查。这些规则听起来不浪漫，却是一个内容平台能长期生存的基础。官网的公告条、更新日志与帮助中心，本质上都是这套规则的对外呈现，让新加入的人知道边界在哪里、路径怎么走。</p>
+
+        <h3>四、品质标准：高清、正版与可复核</h3>
+        <p>在品质层面，这家企业把“高清”与“正版”当作底线而不是卖点。所有上线作品均提供 1080P 起步的成片，重点作品提供 4K 版本与独立字幕文件；素材库按项目编号归档，保留原始素材、工程文件与授权凭证，方便合作方在需要时复核。对于外部投稿，编辑部会进行三轮审核：内容合规、技术达标、版权清晰，任何一项不通过都会给出具体修改意见而不是简单拒稿。这种偏“笨”的做法，让大仟影视传媒在行业里积累了相对稳定的口碑，也让“值得信赖”这四个字有了具体所指。当然，企业并不完美，团队规模有限，热门专题的更新节奏偶尔会因为拍摄周期延后，官网的更新日志里也能看到这些真实的延迟记录。正是这些不掩饰的细节，让一家影视传媒企业的形象更接近它想表达的东西：专业，但不冰冷；有标准，也允许成长。</p>
+        <p>如果要用一句话概括，大仟影视传媒是一家以原创影像为核心、以真实为方法、以长期运营为承诺的影视内容企业。它既做商业项目，也做不赚钱但值得记录的片子；既服务品牌，也扶持新人。官网把这些放在同一个页面里，不是为了显得热闹，而是想说明：内容生态不是一个口号，而是一群人年复一年做出来的具体事情。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- S6 用户评价 + S7 企业动态 -->
+  <section class="dq-section" id="dq-comments">
+    <div class="dq-wrap">
+      <div class="dq-section-head">
+        <div>
+          <span class="dq-eyebrow">Voices · 用户口碑</span>
+          <h2>观众与合作方如何评价大仟影视传媒</h2>
+        </div>
+        <p class="dq-note">以下评价来自官网留言、项目复盘会与社区反馈，保留原始语气，未作统一润色。</p>
+      </div>
+
+      <div class="dq-score-summary">
+        <div class="dq-score-big">4.8</div>
+        <div>
+          <div class="dq-stars" aria-label="综合评分 4.8 分（满分 5 分）">★★★★★</div>
+          <small>综合 1,286 条有效评价 · 内容质量 4.9 · 交付准时 4.7 · 沟通体验 4.8</small>
+        </div>
+      </div>
+
+      <div class="dq-comments">
+        <article class="dq-comment">
+          <div class="dq-comment-top"><b>@青石桥的阿茂</b><span class="dq-stars">★★★★★</span><em>11-19</em></div>
+          <p>《城市呼吸》那集把我们市场拍得很准，没有刻意煽情，连地上积水的反光都留着。看完给我妈打了电话。</p>
+          <button class="dq-linkbtn dq-reply-toggle" type="button">查看官方回复</button>
+          <div class="dq-cmt-reply">官方回复：谢谢你的认可，拍摄时我们在市场待了十七天，就是想等到最自然的状态。</div>
+        </article>
+
+        <article class="dq-comment">
+          <div class="dq-comment-top"><b>@灯具工作室主理人 何岸</b><span class="dq-stars">★★★★★</span><em>11-17</em></div>
+          <p>形象片合作了两次。第一次提案就很清楚，改稿也不推诿。最意外的是他们把我们返工的过程也剪进去了，反而更打动人。</p>
+        </article>
+
+        <article class="dq-comment">
+          <div class="dq-comment-top"><b>@影视系学生 小鹿</b><span class="dq-stars">★★★★☆</span><em>11-15</em></div>
+          <p>教程很实用，尤其是空镜那期，跟着拍了一条作业被老师当范例。就是素材包下载偶尔要等，希望服务器加把劲。</p>
+        </article>
+
+        <article class="dq-comment">
+          <div class="dq-comment-top"><b>@独立剪辑 老墨</b><span class="dq-stars">★★★★★</span><em>11-13</em></div>
+          <p>四款机器的对比做得很老实，参数和原始片段都放了。这种不吹不黑的测评在圈里不多见，值得收藏。</p>
+        </article>
+
+        <article class="dq-comment">
+          <div class="dq-comment-top"><b>@莫干山民宿 阿柚</b><span class="dq-stars">★★★★☆</span><em>11-10</em></div>
+          <p>雨天那支片子是我们民宿拍的，客人看了都在问是不是宣传片。其实没收钱，就是聊得来。真实的东西自己会说话。</p>
+        </article>
+
+        <article class="dq-comment">
+          <div class="dq-comment-top"><b>@品牌市场部 陈经理</b><span class="dq-stars">★★★★★</span><em>11-08</em></div>
+          <p>年度框架合作第三年。流程规范，交付文档齐全，素材归档也整理得很好，我们内部审计时省了很多事。</p>
+        </article>
+
+        <article class="dq-comment">
+          <div class="dq-comment-top"><b>@场记 阿榆</b><span class="dq-stars">★★★★★</span><em>11-05</em></div>
+          <p>访谈那期剪得很克制，没有把我拍成苦情角色。片场确实累，但更多的是好玩。谢谢留住了这一点。</p>
+        </article>
+
+        <article class="dq-comment">
+          <div class="dq-comment-top"><b>@陶艺学徒 子墨</b><span class="dq-stars">★★★★☆</span><em>11-02</em></div>
+          <p>看《一千三百度》才知道窑变这么看运气。希望以后能出一期更长的工作坊实录，现在的版本有点不够看。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="dq-section" id="dq-dynamics">
+    <div class="dq-wrap">
+      <div class="dq-section-head">
+        <div>
+          <span class="dq-eyebrow">Newsroom · 企业动态</span>
+          <h2><span>大仟影视传媒</span> 近期官方发布</h2>
+        </div>
+        <p class="dq-note">企业动态、内容更新与活动报名信息统一在此发布，所有条目均可在帮助中心查询细则。</p>
+      </div>
+      <div class="dq-dynamics">
+        <div class="dq-dyn"><time>2026-11-20</time><p>冬季短片季「夜行人」正式开放报名，接受 5 至 15 分钟的原创纪录或剧情短片，报名截止 12 月 20 日。</p></div>
+        <div class="dq-dyn"><time>2026-11-18</time><p>纪录片《手作之城》第三集上线，同步开放 4K 高清版本与独立字幕下载，素材包已归档至项目库。</p></div>
+        <div class="dq-dyn"><time>2026-11-15</time><p>大仟影视学院 2027 春季班启动招募，设摄影、剪辑、制片三个方向，共计 60 个名额。</p></div>
+        <div class="dq-dyn"><time>2026-11-12</time><p>官网新增高清素材下载专区，首批开放 120 组空镜与音效素材，供社区创作者正版使用。</p></div>
+        <div class="dq-dyn"><time>2026-11-06</time><p>与三家独立影院达成内容合作，2027 年起将联合举办季度短片放映与创作者对谈活动。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 创作灵感 + 合作品牌 -->
+  <section class="dq-section" id="dq-inspiration">
+    <div class="dq-wrap">
+      <div class="dq-section-head">
+        <div>
+          <span class="dq-eyebrow">Inspiration · 创作灵感</span>
+          <h2>给创作者的三组选题与执行思路</h2>
+        </div>
+        <p class="dq-note">编辑部根据近期投稿数据整理的选题方向，欢迎在大仟影视传媒社区继续延展与投票。</p>
+      </div>
+      <div class="dq-insp">
+        <div><b>TITLE 01</b><p>《我工作的那条街》：用一条街串起三个不同职业的一天，固定的机位、固定的时间，靠人物变化形成节奏。</p></div>
+        <div><b>TITLE 02</b><p>《一件旧物的说明书》：挑一件用了五年以上的物品，重写它的使用说明，把磨损痕迹拍成旁白之外的信息。</p></div>
+        <div><b>TITLE 03</b><p>《不成功的尝试》：记录一次失败的手作或实验，不剪掉过程，只保留真实的停顿与放弃，用克制的方式讲完。</p></div>
+      </div>
+
+      <div class="dq-section-head" style="margin-top:2.2rem">
+        <div>
+          <span class="dq-eyebrow">Partners · 合作品牌</span>
+          <h2>与大仟影视传媒长期同行的伙伴</h2>
+        </div>
+        <p class="dq-note">合作覆盖影像设备、独立影院、文化机构与高校影视专业。</p>
+      </div>
+      <div class="dq-partners">
+        <div class="dq-partner">拾光影业<small>联合出品</small></div>
+        <div class="dq-partner">青石桥文化<small>内容合作</small></div>
+        <div class="dq-partner">南方影像学院<small>人才共建</small></div>
+        <div class="dq-partner">坐忘书店<small>放映空间</small></div>
+        <div class="dq-partner">临光器材<small>技术支持</small></div>
+        <div class="dq-partner">木与陶工作室<small>拍摄基地</small></div>
+        <div class="dq-partner">旧厂放映厅<small>联合展映</small></div>
+        <div class="dq-partner">城市档案馆<small>素材支持</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 FAQ -->
+  <section class="dq-section" id="dq-faq">
+    <div class="dq-wrap">
+      <div class="dq-section-head">
+        <div>
+          <span class="dq-eyebrow">Help · 帮助中心</span>
+          <h2>关于大仟影视传媒的常见问题</h2>
+        </div>
+        <p class="dq-note">以下回答由官方整理，如仍有疑问可通过投稿入口联系我们。</p>
+      </div>
+      <div class="dq-faq">
+        <details>
+          <summary>大仟影视传媒的主要业务是什么？</summary>
+          <p>品牌影像制作、原创纪录与剧情片、影视教育与企业内训三个方向。合作方式包含单项目、年度框架与联合出品，具体可查看企业动态中的合作说明。</p>
+        </details>
+        <details>
+          <summary>官网上的视频可以转载或二次剪辑吗？</summary>
+          <p>所有作品均为正版原创内容，转载与二次剪辑需获得书面授权。社区内标注“开放素材”的文件可在署名前提下使用，其他素材请联系编辑部。</p>
+        </details>
+        <details>
+          <summary>投稿需要满足哪些条件？</summary>
+          <p>作品需为原创，时长建议 3 至 20 分钟，提供 1080P 以上成片与字幕文件。编辑部会进行内容合规、技术达标、版权清晰三轮审核，并给出具体修改意见。</p>
+        </details>
+        <details>
+          <summary>「第一次拍片」计划如何报名？</summary>
+          <p>面向入行三年以内的创作者，需提交一份不超过两分钟的试拍片段与选题说明。2027 春季班于 12 月开放报名，入选者可获得设备、场地与后期指导支持。</p>
+        </details>
+        <details>
+          <summary>企业合作从沟通到交付一般需要多久？</summary>
+          <p>形象片通常 4 至 6 周，纪录片类项目根据拍摄周期单独立项。我们在立项时就会给出分阶段时间表与交付清单，所有修改节点均记录在项目文档中。</p>
+        </details>
+        <details>
+          <summary>高清素材下载专区如何使用？</summary>
+          <p>注册并完成创作者认证后即可下载，素材可于个人与非商业项目中使用，商业用途需在项目说明中标注来源并取得授权确认。</p>
+        </details>
+        <details>
+          <summary>如何联系大仟影视传媒官方？</summary>
+          <p>可通过本站投稿入口提交需求，或发送邮件至页面底部的官方邮箱。工作时间为周一至周五 10:00 至 19:00，节假日期间回复可能稍有延迟。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- S8 页脚 -->
+<footer class="dq-footer" id="dq-footer">
+  <div class="dq-wrap">
+    <div class="dq-footer-grid">
+      <div>
+        <div class="dq-footer-brand">大仟影视传媒</div>
+        <p>大仟影视传媒官方网站，专注原创影视内容制作与品牌影像叙事。我们以专业与匠心持续运营内容生态，为创作者与合作伙伴提供值得信赖的高清正版内容。</p>
+        <p style="opacity:.75">品牌故事 · 精品内容 · 官方发布</p>
+      </div>
+      <div>
+        <h4>快速导航</h4>
+        <ul>
+          <li><a href="#dq-focus">焦点内容</a></li>
+          <li><a href="#dq-videos">热门视频流</a></li>
+          <li><a href="#dq-series">专题企划</a></li>
+          <li><a href="#dq-authors">创作者矩阵</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与方式</h4>
+        <ul>
+          <li><a href="#dq-inspiration">创作灵感</a></li>
+          <li><a href="#dq-dynamics">企业动态</a></li>
+          <li><a href="#dq-faq">帮助中心</a></li>
+          <li><a href="#dq-hero">返回首屏</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联系我们</h4>
+        <ul>
+          <li>商务合作：bd@daqian-film.example</li>
+          <li>投稿咨询：submit@daqian-film.example</li>
+          <li>工作时间：周一至周五 10:00-19:00</li>
+          <li>地址：影视创意园区 3 号楼</li>
+        </ul>
+      </div>
+    </div>
+    <div class="dq-footer-bottom">
+      <span>© 2026 大仟影视传媒 版权所有 · 官方网站持续运营中</span>
+      <span>内容登记号：影字 2026-118 · 网络文化经营许可证编号已公示于帮助中心</span>
+    </div>
+  </div>
+</footer>
+
+<button class="dq-top" id="dqTop" type="button" aria-label="回到顶部">↑</button>
+<div class="dq-toast" id="dqToast" role="status" aria-live="polite"></div>
+
+<div class="dq-modal" id="dqModal" role="dialog" aria-modal="true" aria-labelledby="dqModalTitle">
+  <div class="dq-modal-box">
+    <button class="dq-modal-close" id="dqModalClose" type="button" aria-label="关闭">×</button>
+    <h3 id="dqModalTitle">提交内容</h3>
+    <div id="dqModalContent"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toast = document.getElementById('dqToast');
+  var toastTimer = null;
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('is-on');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('is-on'); }, 2200);
+  }
+
+  /* mobile nav */
+  var burger = document.getElementById('dqBurger');
+  var nav = document.getElementById('dqNav');
+  if(burger && nav){
+    burger.addEventListener('click', function(){
+      var open = nav.classList.toggle('is-open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      burger.innerHTML = open ? '× 收起' : '☰ 菜单';
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 1000){
+        nav.classList.remove('is-open');
+        burger.setAttribute('aria-expanded','false');
+        burger.innerHTML = '☰ 菜单';
+      }
+    });
+  }
+
+  /* search feedback */
+  var input = document.getElementById('dqSearchInput');
+  var sBtn = document.getElementById('dqSearchBtn');
+  var sMsg = document.getElementById('dqSearchMsg');
+  var keywords = {
+    '手作':'已为你定位到专题《手作之城》与焦点内容《一把木椅的 72 道工序》',
+    '城市':'已找到「城市探索」相关条目 5 个，包含《从旧厂房到放映厅》',
+    '剪辑':'已找到教程与访谈 3 条，推荐《剪辑师的一天从删素材开始》',
+    '教程':'已找到教程类内容 4 条，包含《一支手机也能拍出电影感空镜》',
+    '纪录':'已找到纪录片专题 2 个，建议从《手作之城》开始看',
+    '访谈':'已找到人物访谈 2 条，推荐场记阿榆那一期',
+    '短片':'已找到原创剧情短片 6 条，可在焦点内容中查看'
+  };
+  function doSearch(){
+    var q = (input.value || '').trim();
+    sMsg.classList.add('is-on');
+    if(!q){
+      sMsg.textContent = '请输入关键词，例如“手作”“城市”“剪辑”。';
+      return;
+    }
+    var hit = null;
+    for(var k in keywords){
+      if(q.indexOf(k) !== -1 || k.indexOf(q) !== -1){ hit = keywords[k]; break; }
+    }
+    sMsg.textContent = hit ? ('“' + q + '” ' + hit) : ('暂未找到与“' + q + '”完全匹配的条目，可浏览专题企划或通过投稿入口联系我们。');
+  }
+  if(sBtn && input){
+    sBtn.addEventListener('click', doSearch);
+    input.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); doSearch(); } });
+    input.addEventListener('input', function(){ sMsg.classList.remove('is-on'); });
+  }
+
+  /* like -(toggle +1 / -1) */
+  document.querySelectorAll('.dq-like').forEach(function(btn){
+    var base = parseInt(btn.getAttribute('data-count'), 10) || 0;
+    var on = false;
+    btn.addEventListener('click', function(){
+      on = !on;
+      var n = on ? base + 1 : base;
+      btn.querySelector('.dq-like-num').textContent = n.toLocaleString('en-US');
+      btn.classList.toggle('is-liked', on);
+      showToast(on ? '已点赞，感谢支持原创内容' : '已取消点赞');
+    });
+  });
+
+  /* favorites */
+  document.querySelectorAll('.dq-fav').forEach(function(btn){
+    var on = false;
+    btn.addEventListener('click', function(){
+      on = !on;
+      btn.classList.toggle('is-fav', on);
+      btn.innerHTML = on ? '<span>★</span> 已收藏' : '<span>☆</span> 收藏';
+      showToast(on ? '已加入收藏，可在个人中心查看' : '已取消收藏');
+    });
+  });
+
+  /* modal helpers */
+  var modal = document.getElementById('dqModal');
+  var modalTitle = document.getElementById('dqModalTitle');
+  var modalContent = document.getElementById('dqModalContent');
+  var modalClose = document.getElementById('dqModalClose');
+  function openModal(title, html){
+    modalTitle.textContent = title;
+    modalContent.innerHTML = html;
+    modal.classList.add('is-on');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    modal.classList.remove('is-on');
+    document.body.style.overflow = '';
+  }
+  modalClose.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && modal.classList.contains('is-on')) closeModal(); });
+
+  /* share */
+  var shareTarget = '';
+  function shareHtml(title){
+    return '<p style="margin-bottom:.6rem">正在分享：<b>' + title + '</b></p>' +
+      '<div class="dq-share-row">' +
+      '<button type="button" data-ch="微信">微信</button>' +
+      '<button type="button" data-ch="微博">微博</button>' +
+      '<button type="button" data-ch="QQ">QQ</button>' +
+      '<button type="button" data-ch="复制链接">复制链接</button>' +
+      '</div>';
+  }
+  document.querySelectorAll('.dq-share').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      shareTarget = btn.getAttribute('data-title') || '大仟影视传媒原创内容';
+      openModal('分享这部作品', shareHtml(shareTarget));
+    });
+  });
+  modalContent.addEventListener('click', function(e){
+    var b = e.target.closest('button');
+    if(!b) return;
+    var ch = b.getAttribute('data-ch');
+    if(!ch) return;
+    if(ch === '复制链接'){
+      var text = '大仟影视传媒 · ' + shareTarget;
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(function(){ showToast('链接已复制'); closeModal(); }, function(){ showToast('复制失败，请手动选择文本'); });
+      } else {
+        showToast('当前环境不支持自动复制，请手动分享');
+      }
+    } else {
+      showToast('已生成分享内容，可通过' + ch + '发送');
+      closeModal();
+    }
+  });
+
+  /* author modal */
+  document.querySelectorAll('.dq-author-more').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var name = btn.getAttribute('data-author') || '';
+      var desc = btn.getAttribute('data-desc') || '';
+      openModal(name + ' · 作者档案',
+        '<p>' + desc + '</p>' +
+        '<p style="margin-top:.7rem;font-size:.82rem;color:#6a7188">该创作者已与大仟影视传媒签署正版内容授权，作品可在官网高清观看。</p>' +
+        '<div class="dq-share-row"><button type="button" data-follow="1">关注创作者</button></div>');
+    });
+  });
+
+  /* comment replies */
+  document.querySelectorAll('.dq-reply-toggle').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var reply = btn.nextElementSibling;
+      if(!reply) return;
+      var open = reply.classList.toggle('is-open');
+      btn.textContent = open ? '收起官方回复' : '查看官方回复';
+    });
+  });
+
+  /* submit modal */
+  var submitBtn = document.getElementById('dqSubmitBtn');
+  function submitForm(){
+    openModal('投稿与联系',
+      '<form id="dqSubmitForm">' +
+      '<div class="dq-form-row"><label for="dqName">称呼</label><input id="dqName" required placeholder="如何称呼你"></div>' +
+      '<div class="dq-form-row"><label for="dqType">类型</label><input id="dqType" placeholder="作品投稿 / 商务合作 / 其他"></div>' +
+      '<div class="dq-form-row"><label for="dqDesc">说明</label><textarea id="dqDesc" rows="4" placeholder="简要描述你的作品主题或合作需求"></textarea></div>' +
+      '<button class="dq-btn" type="submit">提交</button>' +
+      '</form>');
+  }
+  if(submitBtn) submitBtn.addEventListener('click', submitForm);
+  modalContent.addEventListener('submit', function(e){
+    if(e.target.id === 'dqSubmitForm'){
+      e.preventDefault();
+      closeModal();
+      showToast('提交成功，编辑部将在 3 个工作日内回复');
+    }
+  });
+
+  /* follow in modal */
+  modalContent.addEventListener('click', function(e){
+    var b = e.target.closest('button[data-follow]');
+    if(b){ showToast('已关注，后续作品会推送给你'); }
+  });
+
+  /* back to top */
+  var topBtn = document.getElementById('dqTop');
+  window.addEventListener('scroll', function(){
+    topBtn.classList.toggle('is-on', window.scrollY > 500);
+  }, {passive:true});
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+})();
+</script>
+</body>
+                </html>
